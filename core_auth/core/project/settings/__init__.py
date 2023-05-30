@@ -4,8 +4,8 @@ from pathlib import Path
 from split_settings.tools import include, optional
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-print('Project -> settings -> init')
-print('BASE_DIR=', BASE_DIR)
+# print('Project -> settings -> init')
+# print('BASE_DIR=', BASE_DIR)
 
 # Namespacing our own custom environment variables
 ENVVAR_SETTINGS_PREFIX = 'CORESETTINGS_'
