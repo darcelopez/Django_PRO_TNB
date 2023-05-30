@@ -1,6 +1,6 @@
 # Use an official Python runtime as the base image
-FROM python:3.10.4-buster
-#FROM python:3.10.11-buster
+#FROM python:3.10.4-buster
+FROM python:3.10.11-buster
 
 # Set the working directory in the container
 WORKDIR /opt/project
@@ -8,13 +8,13 @@ WORKDIR /opt/project
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH .
-ENV COOKING_CORE_SETTING_IN_DOCKER true
+ENV AUTH_CORESETTINGS_IN_DOCKER true
 
 # Install dependencies
 RUN set -xe \
     && apt-get update \
     && apt-get install -y --no-install-recommends build-essential \
-    && pip install virtualenvwrapper poetry==1.4.2 \
+    && pip install virtualenvwrapper poetry==1.5.1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -23,8 +23,8 @@ COPY ["poetry.lock", "pyproject.toml", "./"]
 RUN poetry install --no-root
 
 # Copy project files
-COPY ["README.md", "Makefile", "./"]
-COPY cooking_core cooking_core
+COPY ["Makefile", "./"]
+COPY core core
 COPY local local
 
 # Expose the Django development server port (adjust if needed)

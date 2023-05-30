@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # print('BASE_DIR=', BASE_DIR)
 
 # Namespacing our own custom environment variables
-ENVVAR_SETTINGS_PREFIX = 'CORESETTINGS_'
+ENVVAR_SETTINGS_PREFIX = 'AUTH_CORESETTINGS_'
 
 LOCAL_SETTINGS_PATH = os.getenv(f'{ENVVAR_SETTINGS_PREFIX}LOCAL_SETTINGS_PATH')
 

@@ -44,3 +44,8 @@ update2: migrate install-pre-commit;
 up-dependencies-only:
 	test -f .env || touch .env
 	docker-compose -f docker-compose.dev.yml up --force-recreate db
+
+.PHONY: up-production
+up-production:
+	test -f .env || touch .env
+	docker-compose -f docker-compose.yml up --force-recreate db

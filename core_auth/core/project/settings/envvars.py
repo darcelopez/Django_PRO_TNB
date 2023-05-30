@@ -4,7 +4,7 @@ from core.general.utils.settings import get_settings_from_environment
 This takes env variables with a matching prefix, strips out the prefix, and adds it to globals
 
 For example:
-export CORESETTINGS_IN_DOCKER=true (environment variable)
+export AUTH_CORESETTINGS_IN_DOCKER=true (environment variable)
 """
 
 # globals() is a dictionary of global variables
