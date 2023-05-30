@@ -20,4 +20,4 @@ superuser:
 	poetry run python -m core.manage runserver
 
 .PHONY: update
-update: install migrate;
+update: install migrate ;
