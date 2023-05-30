@@ -21,3 +21,8 @@ superuser:
 
 .PHONY: update
 update: install migrate ;
+
+.PHONY: inspect-code
+inspect-code:
+	clear
+	poetry run flake8

@@ -1,5 +1,6 @@
 import yaml
 
+
 def yaml_coerce(value):
     # Convert value to proper Python object
     # Converts string dict "{'apples: 1, 'bananas': 2}" to Python dict

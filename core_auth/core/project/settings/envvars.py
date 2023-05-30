@@ -11,4 +11,4 @@ export CORESETTINGS_IN_DOCKER=true (environment variable)
 """
 
 # globals() is a dictionary of global variables
-deep_update(globals(), get_settings_from_environment(ENVVAR_SETTINGS_PREFIX))  #type: ignore
+deep_update(globals(), get_settings_from_environment(ENVVAR_SETTINGS_PREFIX))  # type: ignore # noqa: F821
