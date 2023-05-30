@@ -1,4 +1,4 @@
-# diag_sys_auth
+# Django Pro with TNB
 Authentication provider for diagnostic systems
 
 # Description
